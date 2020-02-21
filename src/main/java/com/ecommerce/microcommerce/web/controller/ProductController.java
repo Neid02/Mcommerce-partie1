@@ -96,4 +96,9 @@ public class ProductController {
         return produitsEtMarges;
     }
 
+    @GetMapping(value = "/ProduitsTries")
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+        return this.productDao.findAllByOrderByNomAsc();
+    }
+
 }
